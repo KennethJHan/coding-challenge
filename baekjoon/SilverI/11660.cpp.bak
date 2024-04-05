@@ -1,0 +1,29 @@
+#include <iostream>
+#include <vector>
+
+int main() {
+    int N, M, tmp, x1, y1, x2, y2;
+    std::cin >> N >> M;
+    std::vector<std::vector<int>> v;
+    for (int i = 0; i < N; i++) {
+        std::vector<int> tmp_v;
+        for (int j = 0; j < N; j++) {
+            std::cin >> tmp;
+            tmp_v.push_back(tmp);
+        }
+        v.push_back(tmp_v);
+    }
+    for (int i = 0; i < M; i++) {
+        int res = 0;
+        std::cin >> x1 >> y1 >> x2 >> y2;
+        for (int m = x1; m <= x2; m++) {
+            for (int n = y1; n <= y2; n++) {
+                // std::cout << "x, y: " << m << ", " << n << ": "
+                //           << v[m - 1][n - 1] << std::endl;
+                res += v[m - 1][n - 1];
+            }
+        }
+        std::cout << res << std::endl;
+    }
+    return 0;
+}
