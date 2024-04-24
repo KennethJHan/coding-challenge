@@ -10,3 +10,5 @@ int main(int argc, char *argv[]) {
     testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
 }
+
+// g++ -o test_31450 test_31450.cpp -lgtest -std=c++14
